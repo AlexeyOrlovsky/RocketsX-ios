@@ -1,0 +1,8 @@
+strings:
+  - inputs: RocketsX/Resources/Localized/en.lproj/Localize.strings
+    outputs:
+      - templatePath: swiftgen_templates/strings/locale.stencil
+        output: RocketsX/Resources/Generated/AppStrings.generated.swift
+        params:
+          enumName: AppLocale
+          publicAccess: true

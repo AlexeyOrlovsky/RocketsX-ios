@@ -33,6 +33,9 @@
 		D22434272DDD36930098C888 /* RocketsXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22434252DDD36930098C888 /* RocketsXApp.swift */; };
 		D24C3BCB2DDE52CC00A3EE00 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D24C3BCA2DDE52CC00A3EE00 /* FirebaseAuth */; };
 		D24C3BCD2DDE52CC00A3EE00 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = D24C3BCC2DDE52CC00A3EE00 /* FirebaseCore */; };
+		D29778122DDF3EC400E54CD4 /* Localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29778102DDF3EC400E54CD4 /* Localize.strings */; };
+		D297781A2DDFB93800E54CD4 /* AppStrings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29778182DDFB93800E54CD4 /* AppStrings.generated.swift */; };
+		D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297781B2DDFB9F700E54CD4 /* LocalizeKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		D22434152DDD36640098C888 /* RocketsX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketsX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22434232DDD36930098C888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22434252DDD36930098C888 /* RocketsXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsXApp.swift; sourceTree = "<group>"; };
+		D29778112DDF3EC400E54CD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localize.strings; sourceTree = "<group>"; };
+		D29778182DDFB93800E54CD4 /* AppStrings.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.generated.swift; sourceTree = "<group>"; };
+		D297781B2DDFB9F700E54CD4 /* LocalizeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,8 @@
 		D224342C2DDD36FF0098C888 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D29778192DDFB93800E54CD4 /* Generated */,
+				D297780F2DDF3EA400E54CD4 /* Localized */,
 				D22434232DDD36930098C888 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -209,6 +217,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D297780F2DDF3EA400E54CD4 /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+				D29778102DDF3EC400E54CD4 /* Localize.strings */,
+				D297781B2DDFB9F700E54CD4 /* LocalizeKeys.swift */,
+			);
+			path = Localized;
+			sourceTree = "<group>";
+		};
+		D29778192DDFB93800E54CD4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D29778182DDFB93800E54CD4 /* AppStrings.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D22434202DDD36660098C888 /* Build configuration list for PBXNativeTarget "RocketsX" */;
 			buildPhases = (
+				D29778132DDF3EE800E54CD4 /* SwiftGen */,
 				D22434112DDD36640098C888 /* Sources */,
 				D22434122DDD36640098C888 /* Frameworks */,
 				D22434132DDD36640098C888 /* Resources */,
+				D29778152DDF3F4C00E54CD4 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -284,10 +311,51 @@
 			files = (
 				D22434262DDD36930098C888 /* Assets.xcassets in Resources */,
 				D21C062F2DDE950100E86B8F /* GoogleService-Info.plist in Resources */,
+				D29778122DDF3EC400E54CD4 /* Localize.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D29778132DDF3EE800E54CD4 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n    if [ -x /opt/homebrew/bin/swiftgen ]; then\n        /opt/homebrew/bin/swiftgen\n    else\n        echo \"error: 😢 SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\n    fi\nfi\n\n";
+		};
+		D29778152DDF3F4C00E54CD4 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"$CI\" ]; then\n       if [ -x /opt/homebrew/bin/swiftgen ]; then\n        /opt/homebrew/bin/swiftgen\n    else\n        echo \"error: 😢 SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n    fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D22434112DDD36640098C888 /* Sources */ = {
@@ -295,12 +363,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21C060D2DDE5DEA00E86B8F /* AuthViewState.swift in Sources */,
+				D297781A2DDFB93800E54CD4 /* AppStrings.generated.swift in Sources */,
 				D21C06132DDE5E0400E86B8F /* AuthRepository.swift in Sources */,
 				D21C05E42DDE57D200E86B8F /* AppDelegate.swift in Sources */,
 				D21C05FA2DDE599B00E86B8F /* AppCoordinatorViewModel.swift in Sources */,
 				D21C05EF2DDE595100E86B8F /* Container.swift in Sources */,
 				D21C05EC2DDE593100E86B8F /* AppCoordinatorModule.swift in Sources */,
 				D21C061C2DDE5EDE00E86B8F /* AuthService.swift in Sources */,
+				D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */,
 				D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */,
 				D22434272DDD36930098C888 /* RocketsXApp.swift in Sources */,
 				D21C05FF2DDE5AD400E86B8F /* CancelBag.swift in Sources */,
@@ -316,6 +386,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D29778102DDF3EC400E54CD4 /* Localize.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29778112DDF3EC400E54CD4 /* en */,
+			);
+			name = Localize.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D224341E2DDD36660098C888 /* Debug */ = {
@@ -356,7 +437,7 @@
 				DEVELOPMENT_TEAM = 32MW45ALLS;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -420,7 +501,7 @@
 				DEVELOPMENT_TEAM = 32MW45ALLS;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -448,6 +529,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32MW45ALLS;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RocketsX/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -479,6 +561,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32MW45ALLS;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RocketsX/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";

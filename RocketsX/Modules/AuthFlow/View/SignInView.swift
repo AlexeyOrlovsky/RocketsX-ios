@@ -9,6 +9,7 @@ import SwiftUI
 
 private typealias Module = AuthModule
 private typealias ModuleView = Module.SignInView
+private typealias Localization = AppLocale.Auth
 
 // MARK: - SplashView
 extension Module {
@@ -33,7 +34,7 @@ private extension ModuleView {
                 Text(error).foregroundColor(.red)
             }
             
-            Button("Sign in with Google") {
+            Button(Localization.Signin.googleButtonText) {
                 viewModel.signIn()
             }
             

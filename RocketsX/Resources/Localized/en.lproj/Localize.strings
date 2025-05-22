@@ -1,0 +1,12 @@
+// MARK: - Auth
+"auth.splash.progressText" = "Checking session...";
+"auth.splash.authenticated" = "Authenticated";
+
+"auth.signin.googleButtonText" = "Sign in with Google";
+
+"auth.service.ui" = "UI";
+"auth.service.noTopVC" = "No top view controller";
+"auth.service.firebase" = "Firebase";
+"auth.service.missingClientID" = "Missing client ID";
+"auth.service.googleAuth" = "GoogleAuth";
+"auth.service.failedIDToken" = "Failed to retrieve id token";

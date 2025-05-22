@@ -10,6 +10,7 @@ import FirebaseAuth
 
 private typealias Module = AuthModule
 private typealias ModuleView = Module.SplashView
+private typealias Localization = AppLocale.Auth
 
 // MARK: - SplashView
 extension Module {
@@ -36,7 +37,7 @@ extension Module {
 private extension ModuleView {
     @ViewBuilder func content() -> some View {
         if !checkedSession {
-            ProgressView("Checking session...")
+            ProgressView(Localization.Splash.progressText)
                 .onAppear {
                     Task {
                         try? await Task.sleep(nanoseconds: 2_000_000_000)
@@ -46,6 +47,7 @@ private extension ModuleView {
                 }
         } else if isAuthenticated {
             //
+            Text(Localization.Splash.authenticated)
         } else {
             Module.SignInView.init(viewModel: viewModel)
         }
