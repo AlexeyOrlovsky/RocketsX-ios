@@ -6,18 +6,18 @@
 //
 
 import SwiftUI
-import Firebase
 
 @main
 struct RocketsXApp: App {
-    // MARK: - Init
-    init() {
-        FirebaseApp.configure()
-    }
+    // MARK: - App Session
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     
+    // MARK: - Dependencies
+    @Inject(\.appCoordinator) var appCoordinator
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            appCoordinator.assemble()
         }
     }
 }
