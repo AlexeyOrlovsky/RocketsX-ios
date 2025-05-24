@@ -10,6 +10,7 @@ import Foundation
 private typealias Module = RocketsModule
 
 protocol RocketsUseCaseProtocol {
+    func getRockets() async throws -> [ResponseModels.RocketModel.Rocket]
 }
 
 // MARK: - UseCase
@@ -19,6 +20,10 @@ extension Module {
         
         init(repository: RocketsRepositoryProtocol) {
             self.repository = repository
+        }
+        
+        func getRockets() async throws -> [ResponseModels.RocketModel.Rocket] {
+            try await repository.getRockets()
         }
     }
 }

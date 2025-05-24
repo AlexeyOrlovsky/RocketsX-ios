@@ -12,5 +12,6 @@ private typealias Module = RocketsModule
 // MARK: - State
 extension Module {
     struct ViewState {
+        var rockets: [ResponseModels.RocketModel.Rocket] = []
     }
 }

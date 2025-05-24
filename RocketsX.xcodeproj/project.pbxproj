@@ -19,6 +19,30 @@
 		D20091442DE0C1CE00484665 /* BuildMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091432DE0C1CE00484665 /* BuildMethods.swift */; };
 		D20091472DE0C30F00484665 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091462DE0C30F00484665 /* RocketCell.swift */; };
 		D200914B2DE12B0800484665 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200914A2DE12B0800484665 /* ViewControllerWrapper.swift */; };
+		D200916C2DE1DA2200484665 /* UploadRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200915D2DE1DA2200484665 /* UploadRouterProtocol.swift */; };
+		D200916D2DE1DA2200484665 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200914F2DE1DA2200484665 /* Data+Extension.swift */; };
+		D200916E2DE1DA2200484665 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091662DE1DA2200484665 /* UserDefaultsStore.swift */; };
+		D200916F2DE1DA2200484665 /* NetworkingAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091562DE1DA2200484665 /* NetworkingAuthenticator.swift */; };
+		D20091702DE1DA2200484665 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091532DE1DA2200484665 /* UIDevice+Extension.swift */; };
+		D20091712DE1DA2200484665 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091572DE1DA2200484665 /* NetworkingError.swift */; };
+		D20091722DE1DA2200484665 /* NetworkingTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091682DE1DA2200484665 /* NetworkingTokenManager.swift */; };
+		D20091732DE1DA2200484665 /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091522DE1DA2200484665 /* HTTPURLResponse+Extension.swift */; };
+		D20091742DE1DA2200484665 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091652DE1DA2200484665 /* StoreProtocol.swift */; };
+		D20091752DE1DA2200484665 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091642DE1DA2200484665 /* KeychainStore.swift */; };
+		D20091762DE1DA2200484665 /* NetworkingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200915A2DE1DA2200484665 /* NetworkingSession.swift */; };
+		D20091772DE1DA2200484665 /* NetworkingSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091622DE1DA2200484665 /* NetworkingSessionProtocol.swift */; };
+		D20091782DE1DA2200484665 /* NetworkingRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200915C2DE1DA2200484665 /* NetworkingRouterProtocol.swift */; };
+		D20091792DE1DA2200484665 /* InterceptorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091612DE1DA2200484665 /* InterceptorProtocol.swift */; };
+		D200917A2DE1DA2200484665 /* AuthenticatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200915F2DE1DA2200484665 /* AuthenticatorProtocol.swift */; };
+		D200917B2DE1DA2200484665 /* NetworkingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091592DE1DA2200484665 /* NetworkingInterceptor.swift */; };
+		D200917C2DE1DA2200484665 /* NetworkingEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091582DE1DA2200484665 /* NetworkingEventMonitor.swift */; };
+		D200917D2DE1DA2200484665 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091512DE1DA2200484665 /* Date+Extension.swift */; };
+		D200917E2DE1DA2200484665 /* NetworkingTokenManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091692DE1DA2200484665 /* NetworkingTokenManagerProtocol.swift */; };
+		D200917F2DE1DA2200484665 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091542DE1DA2200484665 /* URL+Extension.swift */; };
+		D20091802DE1DA2200484665 /* BaseRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091602DE1DA2200484665 /* BaseRestService.swift */; };
+		D20091812DE1DA2200484665 /* DataRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091502DE1DA2200484665 /* DataRequest+Extension.swift */; };
+		D20091842DE1DA4400484665 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091832DE1DA4400484665 /* RestClient.swift */; };
+		D20091862DE1DA6400484665 /* MockableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091852DE1DA6400484665 /* MockableService.swift */; };
 		D21C05E42DDE57D200E86B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C05E32DDE57D200E86B8F /* AppDelegate.swift */; };
 		D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C05E62DDE58C600E86B8F /* AppRoutes.swift */; };
 		D21C05EA2DDE58DB00E86B8F /* FlowStacks in Frameworks */ = {isa = PBXBuildFile; productRef = D21C05E92DDE58DB00E86B8F /* FlowStacks */; };
@@ -48,6 +72,14 @@
 		D29778122DDF3EC400E54CD4 /* Localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29778102DDF3EC400E54CD4 /* Localize.strings */; };
 		D297781A2DDFB93800E54CD4 /* AppStrings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29778182DDFB93800E54CD4 /* AppStrings.generated.swift */; };
 		D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297781B2DDFB9F700E54CD4 /* LocalizeKeys.swift */; };
+		D2B67DF32DE1E1310040F795 /* RestRocketsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67DF12DE1E1310040F795 /* RestRocketsService.swift */; };
+		D2B67DF42DE1E1310040F795 /* MockRocketsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67DF02DE1E1310040F795 /* MockRocketsService.swift */; };
+		D2B67DF52DE1E1310040F795 /* RocketsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67DF22DE1E1310040F795 /* RocketsService.swift */; };
+		D2B67DFA2DE202C90040F795 /* ReqRocketsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67DF92DE202C90040F795 /* ReqRocketsModel.swift */; };
+		D2B67DFC2DE202E40040F795 /* ResRocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67DFB2DE202E40040F795 /* ResRocketModel.swift */; };
+		D2B67E012DE205BB0040F795 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2B67E002DE205BB0040F795 /* Alamofire */; };
+		D2B67E062DE205F60040F795 /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = D2B67E052DE205F60040F795 /* JWTDecode */; };
+		D2B67E092DE2062B0040F795 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D2B67E082DE2062B0040F795 /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +107,30 @@
 		D20091432DE0C1CE00484665 /* BuildMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildMethods.swift; sourceTree = "<group>"; };
 		D20091462DE0C30F00484665 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
 		D200914A2DE12B0800484665 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
+		D200914F2DE1DA2200484665 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		D20091502DE1DA2200484665 /* DataRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extension.swift"; sourceTree = "<group>"; };
+		D20091512DE1DA2200484665 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		D20091522DE1DA2200484665 /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
+		D20091532DE1DA2200484665 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		D20091542DE1DA2200484665 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		D20091562DE1DA2200484665 /* NetworkingAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAuthenticator.swift; sourceTree = "<group>"; };
+		D20091572DE1DA2200484665 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		D20091582DE1DA2200484665 /* NetworkingEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEventMonitor.swift; sourceTree = "<group>"; };
+		D20091592DE1DA2200484665 /* NetworkingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingInterceptor.swift; sourceTree = "<group>"; };
+		D200915A2DE1DA2200484665 /* NetworkingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSession.swift; sourceTree = "<group>"; };
+		D200915C2DE1DA2200484665 /* NetworkingRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRouterProtocol.swift; sourceTree = "<group>"; };
+		D200915D2DE1DA2200484665 /* UploadRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRouterProtocol.swift; sourceTree = "<group>"; };
+		D200915F2DE1DA2200484665 /* AuthenticatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorProtocol.swift; sourceTree = "<group>"; };
+		D20091602DE1DA2200484665 /* BaseRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRestService.swift; sourceTree = "<group>"; };
+		D20091612DE1DA2200484665 /* InterceptorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterceptorProtocol.swift; sourceTree = "<group>"; };
+		D20091622DE1DA2200484665 /* NetworkingSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSessionProtocol.swift; sourceTree = "<group>"; };
+		D20091642DE1DA2200484665 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		D20091652DE1DA2200484665 /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
+		D20091662DE1DA2200484665 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		D20091682DE1DA2200484665 /* NetworkingTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTokenManager.swift; sourceTree = "<group>"; };
+		D20091692DE1DA2200484665 /* NetworkingTokenManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTokenManagerProtocol.swift; sourceTree = "<group>"; };
+		D20091832DE1DA4400484665 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		D20091852DE1DA6400484665 /* MockableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockableService.swift; sourceTree = "<group>"; };
 		D21C05E32DDE57D200E86B8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21C05E62DDE58C600E86B8F /* AppRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutes.swift; sourceTree = "<group>"; };
 		D21C05EB2DDE593100E86B8F /* AppCoordinatorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorModule.swift; sourceTree = "<group>"; };
@@ -100,6 +156,11 @@
 		D29778112DDF3EC400E54CD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localize.strings; sourceTree = "<group>"; };
 		D29778182DDFB93800E54CD4 /* AppStrings.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.generated.swift; sourceTree = "<group>"; };
 		D297781B2DDFB9F700E54CD4 /* LocalizeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeKeys.swift; sourceTree = "<group>"; };
+		D2B67DF02DE1E1310040F795 /* MockRocketsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketsService.swift; sourceTree = "<group>"; };
+		D2B67DF12DE1E1310040F795 /* RestRocketsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRocketsService.swift; sourceTree = "<group>"; };
+		D2B67DF22DE1E1310040F795 /* RocketsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsService.swift; sourceTree = "<group>"; };
+		D2B67DF92DE202C90040F795 /* ReqRocketsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqRocketsModel.swift; sourceTree = "<group>"; };
+		D2B67DFB2DE202E40040F795 /* ResRocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResRocketModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +169,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D24C3BCD2DDE52CC00A3EE00 /* FirebaseCore in Frameworks */,
+				D2B67E012DE205BB0040F795 /* Alamofire in Frameworks */,
 				D24C3BCB2DDE52CC00A3EE00 /* FirebaseAuth in Frameworks */,
 				D21C06212DDE5F2900E86B8F /* GoogleSignInSwift in Frameworks */,
+				D2B67E092DE2062B0040F795 /* KeychainAccess in Frameworks */,
 				D20091402DE0C10700484665 /* SnapKit in Frameworks */,
 				D21C05EA2DDE58DB00E86B8F /* FlowStacks in Frameworks */,
 				D21C05F22DDE596400E86B8F /* Factory in Frameworks */,
+				D2B67E062DE205F60040F795 /* JWTDecode in Frameworks */,
 				D21C061F2DDE5F2900E86B8F /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +238,113 @@
 				D20091392DE0C00900484665 /* BaseControllers */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D200914E2DE1D9D500484665 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D200916B2DE1DA2200484665 /* NetworkingSession */,
+				D20091822DE1DA2900484665 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D20091552DE1DA2200484665 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D200914F2DE1DA2200484665 /* Data+Extension.swift */,
+				D20091502DE1DA2200484665 /* DataRequest+Extension.swift */,
+				D20091512DE1DA2200484665 /* Date+Extension.swift */,
+				D20091522DE1DA2200484665 /* HTTPURLResponse+Extension.swift */,
+				D20091532DE1DA2200484665 /* UIDevice+Extension.swift */,
+				D20091542DE1DA2200484665 /* URL+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D200915B2DE1DA2200484665 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				D20091562DE1DA2200484665 /* NetworkingAuthenticator.swift */,
+				D20091572DE1DA2200484665 /* NetworkingError.swift */,
+				D20091582DE1DA2200484665 /* NetworkingEventMonitor.swift */,
+				D20091592DE1DA2200484665 /* NetworkingInterceptor.swift */,
+				D200915A2DE1DA2200484665 /* NetworkingSession.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		D200915E2DE1DA2200484665 /* NetworkingRouters */ = {
+			isa = PBXGroup;
+			children = (
+				D200915C2DE1DA2200484665 /* NetworkingRouterProtocol.swift */,
+				D200915D2DE1DA2200484665 /* UploadRouterProtocol.swift */,
+			);
+			path = NetworkingRouters;
+			sourceTree = "<group>";
+		};
+		D20091632DE1DA2200484665 /* SessionProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D200915E2DE1DA2200484665 /* NetworkingRouters */,
+				D200915F2DE1DA2200484665 /* AuthenticatorProtocol.swift */,
+				D20091602DE1DA2200484665 /* BaseRestService.swift */,
+				D20091612DE1DA2200484665 /* InterceptorProtocol.swift */,
+				D20091622DE1DA2200484665 /* NetworkingSessionProtocol.swift */,
+			);
+			path = SessionProtocols;
+			sourceTree = "<group>";
+		};
+		D20091672DE1DA2200484665 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				D20091642DE1DA2200484665 /* KeychainStore.swift */,
+				D20091652DE1DA2200484665 /* StoreProtocol.swift */,
+				D20091662DE1DA2200484665 /* UserDefaultsStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		D200916A2DE1DA2200484665 /* TokenManager */ = {
+			isa = PBXGroup;
+			children = (
+				D20091682DE1DA2200484665 /* NetworkingTokenManager.swift */,
+				D20091692DE1DA2200484665 /* NetworkingTokenManagerProtocol.swift */,
+			);
+			path = TokenManager;
+			sourceTree = "<group>";
+		};
+		D200916B2DE1DA2200484665 /* NetworkingSession */ = {
+			isa = PBXGroup;
+			children = (
+				D20091552DE1DA2200484665 /* Extensions */,
+				D200915B2DE1DA2200484665 /* Session */,
+				D20091632DE1DA2200484665 /* SessionProtocols */,
+				D20091672DE1DA2200484665 /* Store */,
+				D200916A2DE1DA2200484665 /* TokenManager */,
+			);
+			path = NetworkingSession;
+			sourceTree = "<group>";
+		};
+		D20091822DE1DA2900484665 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D20091832DE1DA4400484665 /* RestClient.swift */,
+				D20091852DE1DA6400484665 /* MockableService.swift */,
+				D20091872DE1DEBD00484665 /* RocketsService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D20091872DE1DEBD00484665 /* RocketsService */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67DF62DE2026F0040F795 /* Models */,
+				D2B67DF22DE1E1310040F795 /* RocketsService.swift */,
+				D2B67DF12DE1E1310040F795 /* RestRocketsService.swift */,
+				D2B67DF02DE1E1310040F795 /* MockRocketsService.swift */,
+			);
+			path = RocketsService;
 			sourceTree = "<group>";
 		};
 		D21C05E52DDE58B700E86B8F /* AppCoordinator */ = {
@@ -271,6 +442,7 @@
 				D21C05ED2DDE594200E86B8F /* DI */,
 				D20091382DE0BFF800484665 /* Common */,
 				D224342D2DDD37100098C888 /* Modules */,
+				D200914E2DE1D9D500484665 /* Networking */,
 				D21C05FD2DDE5AC800E86B8F /* Utils */,
 				D224342C2DDD36FF0098C888 /* Resources */,
 			);
@@ -330,6 +502,31 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		D2B67DF62DE2026F0040F795 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67DFD2DE2031A0040F795 /* RequestModels */,
+				D2B67DFE2DE203270040F795 /* ResponseModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2B67DFD2DE2031A0040F795 /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67DF92DE202C90040F795 /* ReqRocketsModel.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		D2B67DFE2DE203270040F795 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67DFB2DE202E40040F795 /* ResRocketModel.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +554,9 @@
 				D21C061E2DDE5F2900E86B8F /* GoogleSignIn */,
 				D21C06202DDE5F2900E86B8F /* GoogleSignInSwift */,
 				D200913F2DE0C10700484665 /* SnapKit */,
+				D2B67E002DE205BB0040F795 /* Alamofire */,
+				D2B67E052DE205F60040F795 /* JWTDecode */,
+				D2B67E082DE2062B0040F795 /* KeychainAccess */,
 			);
 			productName = RocketsX;
 			productReference = D22434152DDD36640098C888 /* RocketsX.app */;
@@ -392,6 +592,9 @@
 				D21C05F02DDE596400E86B8F /* XCRemoteSwiftPackageReference "Factory" */,
 				D21C061D2DDE5F2900E86B8F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				D200913E2DE0C10700484665 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D2B67DFF2DE205BB0040F795 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D2B67E042DE205F60040F795 /* XCRemoteSwiftPackageReference "JWTDecode" */,
+				D2B67E072DE2062B0040F795 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D22434162DDD36640098C888 /* Products */;
@@ -464,6 +667,28 @@
 				D21C060D2DDE5DEA00E86B8F /* AuthViewState.swift in Sources */,
 				D297781A2DDFB93800E54CD4 /* AppStrings.generated.swift in Sources */,
 				D21C06132DDE5E0400E86B8F /* AuthRepository.swift in Sources */,
+				D200916C2DE1DA2200484665 /* UploadRouterProtocol.swift in Sources */,
+				D200916D2DE1DA2200484665 /* Data+Extension.swift in Sources */,
+				D200916E2DE1DA2200484665 /* UserDefaultsStore.swift in Sources */,
+				D200916F2DE1DA2200484665 /* NetworkingAuthenticator.swift in Sources */,
+				D20091702DE1DA2200484665 /* UIDevice+Extension.swift in Sources */,
+				D20091712DE1DA2200484665 /* NetworkingError.swift in Sources */,
+				D20091722DE1DA2200484665 /* NetworkingTokenManager.swift in Sources */,
+				D20091732DE1DA2200484665 /* HTTPURLResponse+Extension.swift in Sources */,
+				D20091742DE1DA2200484665 /* StoreProtocol.swift in Sources */,
+				D20091752DE1DA2200484665 /* KeychainStore.swift in Sources */,
+				D20091762DE1DA2200484665 /* NetworkingSession.swift in Sources */,
+				D20091772DE1DA2200484665 /* NetworkingSessionProtocol.swift in Sources */,
+				D20091782DE1DA2200484665 /* NetworkingRouterProtocol.swift in Sources */,
+				D20091792DE1DA2200484665 /* InterceptorProtocol.swift in Sources */,
+				D200917A2DE1DA2200484665 /* AuthenticatorProtocol.swift in Sources */,
+				D200917B2DE1DA2200484665 /* NetworkingInterceptor.swift in Sources */,
+				D200917C2DE1DA2200484665 /* NetworkingEventMonitor.swift in Sources */,
+				D200917D2DE1DA2200484665 /* Date+Extension.swift in Sources */,
+				D200917E2DE1DA2200484665 /* NetworkingTokenManagerProtocol.swift in Sources */,
+				D200917F2DE1DA2200484665 /* URL+Extension.swift in Sources */,
+				D20091802DE1DA2200484665 /* BaseRestService.swift in Sources */,
+				D20091812DE1DA2200484665 /* DataRequest+Extension.swift in Sources */,
 				D20091342DE06D5200484665 /* RocketsRepository.swift in Sources */,
 				D21C05E42DDE57D200E86B8F /* AppDelegate.swift in Sources */,
 				D200913B2DE0C02B00484665 /* BaseViewController.swift in Sources */,
@@ -472,6 +697,10 @@
 				D21C05EF2DDE595100E86B8F /* Container.swift in Sources */,
 				D200914B2DE12B0800484665 /* ViewControllerWrapper.swift in Sources */,
 				D21C05EC2DDE593100E86B8F /* AppCoordinatorModule.swift in Sources */,
+				D2B67DF32DE1E1310040F795 /* RestRocketsService.swift in Sources */,
+				D2B67DF42DE1E1310040F795 /* MockRocketsService.swift in Sources */,
+				D2B67DF52DE1E1310040F795 /* RocketsService.swift in Sources */,
+				D20091862DE1DA6400484665 /* MockableService.swift in Sources */,
 				D21C061C2DDE5EDE00E86B8F /* AuthService.swift in Sources */,
 				D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */,
 				D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */,
@@ -479,8 +708,11 @@
 				D20091362DE06FA900484665 /* RocketsController.swift in Sources */,
 				D21C05FF2DDE5AD400E86B8F /* CancelBag.swift in Sources */,
 				D21C06072DDE5DC700E86B8F /* SplashView.swift in Sources */,
+				D20091842DE1DA4400484665 /* RestClient.swift in Sources */,
 				D20091302DE06D3600484665 /* RocketsViewState.swift in Sources */,
+				D2B67DFC2DE202E40040F795 /* ResRocketModel.swift in Sources */,
 				D21C060F2DDE5DF500E86B8F /* AuthUseCase.swift in Sources */,
+				D2B67DFA2DE202C90040F795 /* ReqRocketsModel.swift in Sources */,
 				D200913D2DE0C0B600484665 /* RocketsView.swift in Sources */,
 				D200912E2DE06CE800484665 /* RocketsViewModel.swift in Sources */,
 				D200912B2DE06CC400484665 /* RocketsModule.swift in Sources */,
@@ -722,8 +954,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
+				kind = exactVersion;
+				version = 5.7.1;
 			};
 		};
 		D21C05E82DDE58DB00E86B8F /* XCRemoteSwiftPackageReference "FlowStacks" */ = {
@@ -756,6 +988,30 @@
 			requirement = {
 				kind = exactVersion;
 				version = 11.13.0;
+			};
+		};
+		D2B67DFF2DE205BB0040F795 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.7.1;
+			};
+		};
+		D2B67E042DE205F60040F795 /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = exactVersion;
+				version = 3.3.0;
+			};
+		};
+		D2B67E072DE2062B0040F795 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -795,6 +1051,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D24C3BBE2DDE52B800A3EE00 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCore;
+		};
+		D2B67E002DE205BB0040F795 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B67DFF2DE205BB0040F795 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D2B67E052DE205F60040F795 /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B67E042DE205F60040F795 /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
+		};
+		D2B67E082DE2062B0040F795 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2B67E072DE2062B0040F795 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

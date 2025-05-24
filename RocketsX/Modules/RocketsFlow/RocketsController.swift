@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import Style
+import Combine
 
 private typealias Module = RocketsModule
 private typealias Controller = Module.Controller
@@ -17,9 +17,9 @@ extension Module {
         // MARK: - Dependencies
         private let viewModel: ViewModel
         private let viewOutput: Module.View?
-        //        private let navigator: AppFlowNavigator?
         
         // MARK: - Properties
+        private var cancellable: CancelBag = .init()
         
         // MARK: - Inits
         init(viewModel: ViewModel) {
@@ -42,11 +42,23 @@ extension Module {
         override func viewDidLoad() {
             super.viewDidLoad()
 
+            bindViewModel()
+            self.viewModel.onAppear()
             commonSetup()
         }
-
+        
         override var preferredStatusBarStyle: UIStatusBarStyle {
             .darkContent
+        }
+        
+        private func bindViewModel() {
+            viewModel.$state
+                .map(\.rockets)
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] _ in
+                    self?.updateTableView()
+                }
+                .store(in: cancellable)
         }
     }
 }
@@ -68,23 +80,30 @@ extension Controller {
 
 // MARK: - UITableViewDataSource
 extension Controller: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
-    }
-
+    func numberOfSections(in tableView: UITableView) -> Int { 1 }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        viewModel.rocketsCount
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         typealias TableCell = Module.TableCell
-        guard let cell: TableCell = tableView.dequeueReusableCell(withIdentifier: TableCell.reuseIdentifier, for: indexPath) as? TableCell
-        else { preconditionFailure() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableCell.reuseIdentifier, for: indexPath) as? TableCell,
+              let rocket = viewModel.rocket(at: indexPath.row) else {
+            preconditionFailure()
+        }
+        
         cell.configure(
-            titleText: "Hello",
-            contentText: "Hello",
+            titleText: rocket.name,
+            contentText: """
+                    🚀 First Flight: \(rocket.firstFlight)
+                    ✅ Success Rate: \(rocket.successRatePct)%
+                    📏 Height: \(rocket.height.meters ?? 0)m
+                    🔘 Diameter: \(rocket.diameter.meters ?? 0)m
+                    ⚖️ Mass: \(rocket.mass.kg)kg
+                    """
         )
-
+        
         return cell
     }
 }

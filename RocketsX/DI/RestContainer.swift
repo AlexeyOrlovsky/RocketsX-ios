@@ -30,5 +30,18 @@ extension Container: @retroactive AutoRegistering {
     var rocketsModule: Factory<RocketsModule> {
         self { .init() }
     }
+    
+    // MARK: - Networking
+    var restClient: Factory<RestClient> {
+        self { RestClient(baseURL: ApiURLsPath.baseApiUrl) }
+    }
+
+//    var rocketsRestClient: Factory<RestClient> {
+//        self { RestClient(baseURL: ApiURLsPath.rockets) }
+//    }
+
+    var rocketsService: Factory<RocketsService> {
+        self { RestRocketsService(restClient: self.restClient.resolve()) }
+    }
 }
 

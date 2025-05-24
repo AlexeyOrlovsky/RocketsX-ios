@@ -10,10 +10,16 @@ import Foundation
 private typealias Module = RocketsModule
 
 protocol RocketsRepositoryProtocol {
+    func getRockets() async throws -> [ResponseModels.RocketModel.Rocket]
 }
 
 // MARK: - Repository
 extension Module {
     struct Repository: RocketsRepositoryProtocol {
+        let rocketsService: RocketsService
+        
+        func getRockets() async throws -> [ResponseModels.RocketModel.Rocket] {
+            try await rocketsService.getRockets(RequestModels.Rockets())
+        }
     }
 }
