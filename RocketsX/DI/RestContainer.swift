@@ -26,5 +26,9 @@ extension Container: @retroactive AutoRegistering {
     var authModule: Factory<AuthModule> {
         self { .init() }
     }
+    
+    var rocketsModule: Factory<RocketsModule> {
+        self { .init() }
+    }
 }
 

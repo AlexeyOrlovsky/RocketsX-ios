@@ -17,6 +17,7 @@ extension Module {
         
         // MARK: - Private
         @Inject(\.authModule) private var authModule
+        @Inject(\.rocketsModule) private var rocketsModule
         
         var body: some View {
             Router(viewModel.routes) { screen, _ in
@@ -25,6 +26,8 @@ extension Module {
                     authModule.assembleSplash()
                 case .signIn:
                     authModule.assembleSignIn()
+                case .rockets:
+                    ViewControllerWrapper(controller: rocketsModule.assemble())
                 }
             }
         }

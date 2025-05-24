@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D200912B2DE06CC400484665 /* RocketsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200912A2DE06CC400484665 /* RocketsModule.swift */; };
+		D200912E2DE06CE800484665 /* RocketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200912D2DE06CE800484665 /* RocketsViewModel.swift */; };
+		D20091302DE06D3600484665 /* RocketsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200912F2DE06D3600484665 /* RocketsViewState.swift */; };
+		D20091322DE06D4400484665 /* RocketsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091312DE06D4400484665 /* RocketsUseCase.swift */; };
+		D20091342DE06D5200484665 /* RocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091332DE06D5200484665 /* RocketsRepository.swift */; };
+		D20091362DE06FA900484665 /* RocketsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091352DE06FA900484665 /* RocketsController.swift */; };
+		D200913B2DE0C02B00484665 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200913A2DE0C02B00484665 /* BaseViewController.swift */; };
+		D200913D2DE0C0B600484665 /* RocketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200913C2DE0C0B600484665 /* RocketsView.swift */; };
+		D20091402DE0C10700484665 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D200913F2DE0C10700484665 /* SnapKit */; };
+		D20091442DE0C1CE00484665 /* BuildMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091432DE0C1CE00484665 /* BuildMethods.swift */; };
+		D20091472DE0C30F00484665 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20091462DE0C30F00484665 /* RocketCell.swift */; };
+		D200914B2DE12B0800484665 /* ViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D200914A2DE12B0800484665 /* ViewControllerWrapper.swift */; };
 		D21C05E42DDE57D200E86B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C05E32DDE57D200E86B8F /* AppDelegate.swift */; };
 		D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C05E62DDE58C600E86B8F /* AppRoutes.swift */; };
 		D21C05EA2DDE58DB00E86B8F /* FlowStacks in Frameworks */ = {isa = PBXBuildFile; productRef = D21C05E92DDE58DB00E86B8F /* FlowStacks */; };
@@ -38,7 +50,31 @@
 		D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297781B2DDFB9F700E54CD4 /* LocalizeKeys.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D200914D2DE12C6D00484665 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D200912A2DE06CC400484665 /* RocketsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsModule.swift; sourceTree = "<group>"; };
+		D200912D2DE06CE800484665 /* RocketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewModel.swift; sourceTree = "<group>"; };
+		D200912F2DE06D3600484665 /* RocketsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsViewState.swift; sourceTree = "<group>"; };
+		D20091312DE06D4400484665 /* RocketsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsUseCase.swift; sourceTree = "<group>"; };
+		D20091332DE06D5200484665 /* RocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsRepository.swift; sourceTree = "<group>"; };
+		D20091352DE06FA900484665 /* RocketsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsController.swift; sourceTree = "<group>"; };
+		D200913A2DE0C02B00484665 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D200913C2DE0C0B600484665 /* RocketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsView.swift; sourceTree = "<group>"; };
+		D20091432DE0C1CE00484665 /* BuildMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildMethods.swift; sourceTree = "<group>"; };
+		D20091462DE0C30F00484665 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
+		D200914A2DE12B0800484665 /* ViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWrapper.swift; sourceTree = "<group>"; };
 		D21C05E32DDE57D200E86B8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D21C05E62DDE58C600E86B8F /* AppRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutes.swift; sourceTree = "<group>"; };
 		D21C05EB2DDE593100E86B8F /* AppCoordinatorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorModule.swift; sourceTree = "<group>"; };
@@ -74,6 +110,7 @@
 				D24C3BCD2DDE52CC00A3EE00 /* FirebaseCore in Frameworks */,
 				D24C3BCB2DDE52CC00A3EE00 /* FirebaseAuth in Frameworks */,
 				D21C06212DDE5F2900E86B8F /* GoogleSignInSwift in Frameworks */,
+				D20091402DE0C10700484665 /* SnapKit in Frameworks */,
 				D21C05EA2DDE58DB00E86B8F /* FlowStacks in Frameworks */,
 				D21C05F22DDE596400E86B8F /* Factory in Frameworks */,
 				D21C061F2DDE5F2900E86B8F /* GoogleSignIn in Frameworks */,
@@ -83,6 +120,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D20091292DDFEB2600484665 /* RocketsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				D200912A2DE06CC400484665 /* RocketsModule.swift */,
+				D200912D2DE06CE800484665 /* RocketsViewModel.swift */,
+				D200912F2DE06D3600484665 /* RocketsViewState.swift */,
+				D20091312DE06D4400484665 /* RocketsUseCase.swift */,
+				D20091332DE06D5200484665 /* RocketsRepository.swift */,
+				D20091452DE0C2FB00484665 /* Views */,
+				D200913C2DE0C0B600484665 /* RocketsView.swift */,
+				D20091352DE06FA900484665 /* RocketsController.swift */,
+			);
+			path = RocketsFlow;
+			sourceTree = "<group>";
+		};
+		D20091382DE0BFF800484665 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D20091492DE12AE500484665 /* Controllers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D20091392DE0C00900484665 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D200913A2DE0C02B00484665 /* BaseViewController.swift */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		D20091452DE0C2FB00484665 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D20091462DE0C30F00484665 /* RocketCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D20091482DE12AC400484665 /* ControllerWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				D200914A2DE12B0800484665 /* ViewControllerWrapper.swift */,
+			);
+			path = ControllerWrappers;
+			sourceTree = "<group>";
+		};
+		D20091492DE12AE500484665 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D20091482DE12AC400484665 /* ControllerWrappers */,
+				D20091392DE0C00900484665 /* BaseControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D21C05E52DDE58B700E86B8F /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				D21C06252DDE608500E86B8F /* UIKit+Extension */,
+				D20091432DE0C1CE00484665 /* BuildMethods.swift */,
 				D21C05FE2DDE5AD400E86B8F /* CancelBag.swift */,
 			);
 			path = Utils;
@@ -175,6 +269,7 @@
 				D21C062E2DDE950100E86B8F /* GoogleService-Info.plist */,
 				D224342B2DDD36EF0098C888 /* App */,
 				D21C05ED2DDE594200E86B8F /* DI */,
+				D20091382DE0BFF800484665 /* Common */,
 				D224342D2DDD37100098C888 /* Modules */,
 				D21C05FD2DDE5AC800E86B8F /* Utils */,
 				D224342C2DDD36FF0098C888 /* Resources */,
@@ -206,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				D21C06002DDE5B1B00E86B8F /* AuthFlow */,
+				D20091292DDFEB2600484665 /* RocketsFlow */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -246,6 +342,7 @@
 				D22434122DDD36640098C888 /* Frameworks */,
 				D22434132DDD36640098C888 /* Resources */,
 				D29778152DDF3F4C00E54CD4 /* Swift Lint */,
+				D200914D2DE12C6D00484665 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +356,7 @@
 				D21C05F12DDE596400E86B8F /* Factory */,
 				D21C061E2DDE5F2900E86B8F /* GoogleSignIn */,
 				D21C06202DDE5F2900E86B8F /* GoogleSignInSwift */,
+				D200913F2DE0C10700484665 /* SnapKit */,
 			);
 			productName = RocketsX;
 			productReference = D22434152DDD36640098C888 /* RocketsX.app */;
@@ -293,6 +391,7 @@
 				D21C05E82DDE58DB00E86B8F /* XCRemoteSwiftPackageReference "FlowStacks" */,
 				D21C05F02DDE596400E86B8F /* XCRemoteSwiftPackageReference "Factory" */,
 				D21C061D2DDE5F2900E86B8F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				D200913E2DE0C10700484665 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D22434162DDD36640098C888 /* Products */;
@@ -365,19 +464,30 @@
 				D21C060D2DDE5DEA00E86B8F /* AuthViewState.swift in Sources */,
 				D297781A2DDFB93800E54CD4 /* AppStrings.generated.swift in Sources */,
 				D21C06132DDE5E0400E86B8F /* AuthRepository.swift in Sources */,
+				D20091342DE06D5200484665 /* RocketsRepository.swift in Sources */,
 				D21C05E42DDE57D200E86B8F /* AppDelegate.swift in Sources */,
+				D200913B2DE0C02B00484665 /* BaseViewController.swift in Sources */,
 				D21C05FA2DDE599B00E86B8F /* AppCoordinatorViewModel.swift in Sources */,
+				D20091472DE0C30F00484665 /* RocketCell.swift in Sources */,
 				D21C05EF2DDE595100E86B8F /* Container.swift in Sources */,
+				D200914B2DE12B0800484665 /* ViewControllerWrapper.swift in Sources */,
 				D21C05EC2DDE593100E86B8F /* AppCoordinatorModule.swift in Sources */,
 				D21C061C2DDE5EDE00E86B8F /* AuthService.swift in Sources */,
 				D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */,
 				D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */,
 				D22434272DDD36930098C888 /* RocketsXApp.swift in Sources */,
+				D20091362DE06FA900484665 /* RocketsController.swift in Sources */,
 				D21C05FF2DDE5AD400E86B8F /* CancelBag.swift in Sources */,
 				D21C06072DDE5DC700E86B8F /* SplashView.swift in Sources */,
+				D20091302DE06D3600484665 /* RocketsViewState.swift in Sources */,
 				D21C060F2DDE5DF500E86B8F /* AuthUseCase.swift in Sources */,
+				D200913D2DE0C0B600484665 /* RocketsView.swift in Sources */,
+				D200912E2DE06CE800484665 /* RocketsViewModel.swift in Sources */,
+				D200912B2DE06CC400484665 /* RocketsModule.swift in Sources */,
 				D21C06272DDE609000E86B8F /* UIApplication+Extension.swift in Sources */,
 				D21C060B2DDE5DDC00E86B8F /* AuthViewModel.swift in Sources */,
+				D20091442DE0C1CE00484665 /* BuildMethods.swift in Sources */,
+				D20091322DE06D4400484665 /* RocketsUseCase.swift in Sources */,
 				D21C06292DDE621600E86B8F /* AuthModule.swift in Sources */,
 				D21C05FC2DDE59A200E86B8F /* AppCoordinator.swift in Sources */,
 				D21C06092DDE5DD000E86B8F /* SignInView.swift in Sources */,
@@ -608,6 +718,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D200913E2DE0C10700484665 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		D21C05E82DDE58DB00E86B8F /* XCRemoteSwiftPackageReference "FlowStacks" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/johnpatrickmorgan/FlowStacks";
@@ -643,6 +761,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D200913F2DE0C10700484665 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D200913E2DE0C10700484665 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		D21C05E92DDE58DB00E86B8F /* FlowStacks */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D21C05E82DDE58DB00E86B8F /* XCRemoteSwiftPackageReference "FlowStacks" */;

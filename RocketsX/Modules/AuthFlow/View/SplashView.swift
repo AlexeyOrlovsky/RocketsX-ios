@@ -46,8 +46,10 @@ private extension ModuleView {
                     }
                 }
         } else if isAuthenticated {
-            //
-            Text(Localization.Splash.authenticated)
+            Color.clear
+                .task {
+                    self.navigator.routes = [.root(.rockets)]
+                }
         } else {
             Module.SignInView.init(viewModel: viewModel)
         }

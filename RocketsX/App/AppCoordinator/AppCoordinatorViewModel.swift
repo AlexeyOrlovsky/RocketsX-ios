@@ -21,6 +21,7 @@ extension Module {
         enum Screen {
             case splash
             case signIn
+            case rockets
         }
 
         // MARK: - Public Properties
@@ -58,5 +59,3 @@ private extension ViewModel {
             .store(in: cancellable)
     }
 }
-
-
