@@ -94,14 +94,12 @@ extension Controller: UITableViewDataSource {
         }
         
         cell.configure(
-            titleText: rocket.name,
-            contentText: """
-                    🚀 First Flight: \(rocket.firstFlight)
-                    ✅ Success Rate: \(rocket.successRatePct)%
-                    📏 Height: \(rocket.height.meters ?? 0)m
-                    🔘 Diameter: \(rocket.diameter.meters ?? 0)m
-                    ⚖️ Mass: \(rocket.mass.kg)kg
-                    """
+            nameText: "Name: \(rocket.name)",
+            dateText: "Date: \(rocket.firstFlight)",
+            successText: "Success: \(rocket.successRatePct)",
+            heightText: "\(rocket.height.meters ?? 0) HT",
+            diameterText: "\(rocket.diameter.meters ?? 0) ⌀",
+            weightText: "\(rocket.mass.kg) kg"
         )
         
         return cell
@@ -111,10 +109,14 @@ extension Controller: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension Controller: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        120
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         tableView.estimatedSectionHeaderHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

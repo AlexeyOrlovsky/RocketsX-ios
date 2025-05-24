@@ -17,12 +17,6 @@ extension ResponseModels {
             let height: Dimension
             let diameter: Dimension
             let mass: Mass
-
-//            enum CodingKeys: String, CodingKey {
-//                case id, name
-//                case successRatePct = "success_rate_pct"
-//                case height, diameter, mass
-//            }
         }
 
         struct Dimension: Decodable {
@@ -35,3 +29,16 @@ extension ResponseModels {
     }
 }
 
+extension ResponseModels.RocketModel.Rocket {
+    init(from entity: RocketEntity) {
+        self.init(
+            id: entity.id,
+            name: entity.name,
+            firstFlight: entity.firstFlight,
+            successRatePct: entity.successRate,
+            height: .init(meters: entity.height),
+            diameter: .init(meters: entity.diameter),
+            mass: .init(kg: Int(entity.mass))
+        )
+    }
+}

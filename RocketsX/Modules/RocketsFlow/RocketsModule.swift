@@ -11,11 +11,11 @@ import SwiftUI
 struct RocketsModule {
     typealias ViewModelProtocol = RocketsViewModelProtocol
     
-//    @Inject(\.appRoutes) private var appRoutes
     @Inject(\.rocketsService) private var rocketsService
+    @Inject(\.rocketStorage) private var rocketStorage
     
     func assemble() -> some UIViewController {
-        let repository = Repository(rocketsService: rocketsService)
+        let repository = Repository(rocketsService: rocketsService, cacheService: rocketStorage)
         let useCase = UseCase(repository: repository)
         let viewModel = ViewModel(useCase: useCase)
 

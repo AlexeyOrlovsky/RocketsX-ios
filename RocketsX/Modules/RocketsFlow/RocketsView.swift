@@ -17,7 +17,6 @@ extension Module {
         private(set) lazy var tableView: UITableView = build(
             .init(frame: .zero, style: .plain)
         ) {
-            $0.backgroundColor = .gray
             $0.register(TableCell.self, forCellReuseIdentifier: TableCell.reuseIdentifier)
             $0.separatorInset = .init(top: 0, left: 0, bottom: 0, right: 0)
         }
@@ -37,8 +36,6 @@ extension Module {
 // MARK: - Private Methods
 private extension View {
     func commonSetup() {
-        backgroundColor = .white
-
         addSubview(tableView)
         makeConstraints()
     }

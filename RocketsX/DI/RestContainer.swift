@@ -36,12 +36,13 @@ extension Container: @retroactive AutoRegistering {
         self { RestClient(baseURL: ApiURLsPath.baseApiUrl) }
     }
 
-//    var rocketsRestClient: Factory<RestClient> {
-//        self { RestClient(baseURL: ApiURLsPath.rockets) }
-//    }
-
     var rocketsService: Factory<RocketsService> {
         self { RestRocketsService(restClient: self.restClient.resolve()) }
+    }
+    
+    // MARK: - Managers
+    var rocketStorage: Factory<RocketStorage> {
+        self { .init(container: AppDelegate.sharedContainer) }
     }
 }
 

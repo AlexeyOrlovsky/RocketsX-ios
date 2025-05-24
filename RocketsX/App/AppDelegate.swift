@@ -7,8 +7,12 @@
 
 import UIKit
 import Firebase
+import SwiftData
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    // MARK: - SwiftData
+    static var sharedContainer: ModelContainer! // force unwrap!!!
     
     // MARK: - UIApplicationDelegate
     func application(
@@ -18,7 +22,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         // #if RELEASE
         FirebaseApp.configure()
         // #endif
+        configureSwiftData()
         
         return true
+    }
+}
+
+// MARK: - Private Methods
+private extension AppDelegate {
+    private func configureSwiftData() {
+        do {
+            let schema = Schema([RocketEntity.self])
+            let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+            Self.sharedContainer = try ModelContainer(for: schema, configurations: [config])
+        } catch {
+            print("⚠️ Failed to configure SwiftData: \(error)")
+        }
     }
 }
