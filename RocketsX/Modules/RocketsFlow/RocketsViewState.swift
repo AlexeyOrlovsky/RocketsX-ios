@@ -9,7 +9,7 @@ import Foundation
 
 private typealias Module = RocketsModule
 
-// MARK: - State
+// MARK: - ViewState
 extension Module {
     struct ViewState {
         var rockets: [ResponseModels.RocketModel.Rocket] = []

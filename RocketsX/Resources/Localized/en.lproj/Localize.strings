@@ -21,3 +21,6 @@
 "rockets.cell.diameter" = " ⌀";
 "rockets.cell.kg" = " kg";
 "rockets.signOut" = "Sign Out";
+
+// MARK: - Launches
+"launches.title" = "Launches";

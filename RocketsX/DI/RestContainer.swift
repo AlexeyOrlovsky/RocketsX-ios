@@ -31,6 +31,10 @@ extension Container: @retroactive AutoRegistering {
         self { .init() }
     }
     
+    var launchesModule: Factory<LaunchesModule> {
+        self { .init() }
+    }
+    
     // MARK: - Networking
     var restClient: Factory<RestClient> {
         self { RestClient(baseURL: ApiURLsPath.baseApiUrl) }

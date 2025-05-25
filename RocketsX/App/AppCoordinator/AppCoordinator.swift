@@ -18,6 +18,7 @@ extension Module {
         // MARK: - Private
         @Inject(\.authModule) private var authModule
         @Inject(\.rocketsModule) private var rocketsModule
+        @Inject(\.launchesModule) private var launchesModule
         
         var body: some View {
             Router(viewModel.routes) { screen, _ in
@@ -28,6 +29,8 @@ extension Module {
                     authModule.assembleSignIn()
                 case .rockets:
                     ViewControllerWrapper(controller: rocketsModule.assemble())
+                case .launches:
+                    launchesModule.assemble()
                 }
             }
         }

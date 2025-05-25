@@ -22,6 +22,7 @@ extension Module {
             case splash
             case signIn
             case rockets
+            case launches
         }
 
         // MARK: - Public Properties

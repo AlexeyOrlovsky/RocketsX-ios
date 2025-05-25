@@ -11,9 +11,10 @@ import SwiftUI
 struct AuthModule {
     typealias ViewModelProtocol = AuthViewModelProtocol
     
+    @Inject(\.authService) private var authService
+    
     func assembleSplash() -> some View {
-        let service = AuthService()
-        let repository = Repository(service: service)
+        let repository = Repository(service: authService)
         let useCase = UseCase(repository: repository)
         let viewModel = ViewModel(useCase: useCase)
 

@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SwiftUI
 
 private typealias Module = RocketsModule
 private typealias Controller = Module.Controller
@@ -149,5 +150,8 @@ extension Controller: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = UIHostingController(rootView: LaunchesModule().assemble())
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

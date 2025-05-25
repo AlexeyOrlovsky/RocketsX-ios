@@ -52,6 +52,11 @@ public enum AppLocale {
     }
   }
 
+  public enum Launches {
+      /// Launches
+      public static var title: String { AppLocale.tr("Localize", "launches.title") }
+  }
+
   public enum Rockets {
       /// Sign Out
       public static var signOut: String { AppLocale.tr("Localize", "rockets.signOut") }
