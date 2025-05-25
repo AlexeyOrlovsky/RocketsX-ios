@@ -10,3 +10,14 @@
 "auth.service.missingClientID" = "Missing client ID";
 "auth.service.googleAuth" = "GoogleAuth";
 "auth.service.failedIDToken" = "Failed to retrieve id token";
+"auth.service.failedSignOut" = "Failed to log out of account";
+
+// MARK: - Rockets
+"rockets.title" = "Rockets List";
+"rockets.cell.name" = "Name: ";
+"rockets.cell.date" = "Date: ";
+"rockets.cell.success" = "Success: ";
+"rockets.cell.ht" = " HT";
+"rockets.cell.diameter" = " ⌀";
+"rockets.cell.kg" = " kg";
+"rockets.signOut" = "Sign Out";

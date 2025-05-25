@@ -59,7 +59,6 @@
 		D21C060D2DDE5DEA00E86B8F /* AuthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C060C2DDE5DEA00E86B8F /* AuthViewState.swift */; };
 		D21C060F2DDE5DF500E86B8F /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C060E2DDE5DF500E86B8F /* AuthUseCase.swift */; };
 		D21C06132DDE5E0400E86B8F /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C06122DDE5E0400E86B8F /* AuthRepository.swift */; };
-		D21C061C2DDE5EDE00E86B8F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C061B2DDE5EDE00E86B8F /* AuthService.swift */; };
 		D21C061F2DDE5F2900E86B8F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = D21C061E2DDE5F2900E86B8F /* GoogleSignIn */; };
 		D21C06212DDE5F2900E86B8F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D21C06202DDE5F2900E86B8F /* GoogleSignInSwift */; };
 		D21C06272DDE609000E86B8F /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21C06262DDE609000E86B8F /* UIApplication+Extension.swift */; };
@@ -82,6 +81,7 @@
 		D2B67E092DE2062B0040F795 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = D2B67E082DE2062B0040F795 /* KeychainAccess */; };
 		D2B67E0C2DE23E710040F795 /* RocketEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E0B2DE23E710040F795 /* RocketEntity.swift */; };
 		D2B67E102DE23EC70040F795 /* RocketStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E0F2DE23EC70040F795 /* RocketStorage.swift */; };
+		D2B67E152DE33EF60040F795 /* RestAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E142DE33EF60040F795 /* RestAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -147,7 +147,6 @@
 		D21C060C2DDE5DEA00E86B8F /* AuthViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewState.swift; sourceTree = "<group>"; };
 		D21C060E2DDE5DF500E86B8F /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		D21C06122DDE5E0400E86B8F /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		D21C061B2DDE5EDE00E86B8F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D21C06262DDE609000E86B8F /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		D21C06282DDE621600E86B8F /* AuthModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModule.swift; sourceTree = "<group>"; };
 		D21C062E2DDE950100E86B8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -165,6 +164,7 @@
 		D2B67DFB2DE202E40040F795 /* ResRocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResRocketModel.swift; sourceTree = "<group>"; };
 		D2B67E0B2DE23E710040F795 /* RocketEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketEntity.swift; sourceTree = "<group>"; };
 		D2B67E0F2DE23EC70040F795 /* RocketStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStorage.swift; sourceTree = "<group>"; };
+		D2B67E142DE33EF60040F795 /* RestAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +336,7 @@
 				D20091832DE1DA4400484665 /* RestClient.swift */,
 				D20091852DE1DA6400484665 /* MockableService.swift */,
 				D20091872DE1DEBD00484665 /* RocketsService */,
+				D2B67E132DE33ED50040F795 /* AuthService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -390,7 +391,6 @@
 				D21C060E2DDE5DF500E86B8F /* AuthUseCase.swift */,
 				D21C06122DDE5E0400E86B8F /* AuthRepository.swift */,
 				D21C06012DDE5BFA00E86B8F /* View */,
-				D21C061A2DDE5EC400E86B8F /* Service */,
 			);
 			path = AuthFlow;
 			sourceTree = "<group>";
@@ -402,14 +402,6 @@
 				D21C06082DDE5DD000E86B8F /* SignInView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D21C061A2DDE5EC400E86B8F /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				D21C061B2DDE5EDE00E86B8F /* AuthService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		D21C06252DDE608500E86B8F /* UIKit+Extension */ = {
@@ -547,6 +539,14 @@
 				D2B67E0F2DE23EC70040F795 /* RocketStorage.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		D2B67E132DE33ED50040F795 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67E142DE33EF60040F795 /* RestAuthService.swift */,
+			);
+			path = AuthService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,6 +699,7 @@
 				D20091732DE1DA2200484665 /* HTTPURLResponse+Extension.swift in Sources */,
 				D20091742DE1DA2200484665 /* StoreProtocol.swift in Sources */,
 				D20091752DE1DA2200484665 /* KeychainStore.swift in Sources */,
+				D2B67E152DE33EF60040F795 /* RestAuthService.swift in Sources */,
 				D20091762DE1DA2200484665 /* NetworkingSession.swift in Sources */,
 				D20091772DE1DA2200484665 /* NetworkingSessionProtocol.swift in Sources */,
 				D20091782DE1DA2200484665 /* NetworkingRouterProtocol.swift in Sources */,
@@ -725,7 +726,6 @@
 				D2B67DF42DE1E1310040F795 /* MockRocketsService.swift in Sources */,
 				D2B67DF52DE1E1310040F795 /* RocketsService.swift in Sources */,
 				D20091862DE1DA6400484665 /* MockableService.swift in Sources */,
-				D21C061C2DDE5EDE00E86B8F /* AuthService.swift in Sources */,
 				D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */,
 				D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */,
 				D22434272DDD36930098C888 /* RocketsXApp.swift in Sources */,

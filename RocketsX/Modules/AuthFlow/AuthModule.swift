@@ -34,6 +34,6 @@ struct AuthModule {
 protocol AuthViewModelProtocol: ObservableObject {
     var state: AuthModule.ViewState { get set }
     
-    func signIn()
+    func signIn() async -> Bool
     func onAppear()
 }

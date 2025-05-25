@@ -40,6 +40,10 @@ extension Container: @retroactive AutoRegistering {
         self { RestRocketsService(restClient: self.restClient.resolve()) }
     }
     
+    var authService: Factory<AuthService> {
+        self { .init() }
+    }
+    
     // MARK: - Managers
     var rocketStorage: Factory<RocketStorage> {
         self { .init(container: AppDelegate.sharedContainer) }

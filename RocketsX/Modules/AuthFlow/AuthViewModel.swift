@@ -35,21 +35,22 @@ extension Module {
         }
         
         // MARK: - Public Methods
-        func signIn() {
-            Task {
-                await MainActor.run { self.state.isLoading = true }
-                do {
-                    try await useCase.signInWithGoogle()
-                    await MainActor.run {
-                        self.state.isLoading = false
-                        self.state.error = nil
-                    }
-                } catch {
-                    await MainActor.run {
-                        self.state.isLoading = false
-                        self.state.error = error.localizedDescription
-                    }
+        func signIn() async -> Bool {
+            await MainActor.run { self.state.isLoading = true }
+            
+            do {
+                try await useCase.signInWithGoogle()
+                await MainActor.run {
+                    self.state.isLoading = false
+                    self.state.error = nil
                 }
+                return true
+            } catch {
+                await MainActor.run {
+                    self.state.isLoading = false
+                    self.state.error = error.localizedDescription
+                }
+                return false
             }
         }
     }

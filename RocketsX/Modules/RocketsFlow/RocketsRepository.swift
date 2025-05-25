@@ -17,16 +17,16 @@ protocol RocketsRepositoryProtocol {
 extension Module {
     struct Repository: RocketsRepositoryProtocol {
         let rocketsService: RocketsService
-        let cacheService: RocketStorageProtocol
+        let rocketStorage: RocketStorageProtocol
         
         func getRockets() async throws -> [ResponseModels.RocketModel.Rocket] {
-            let cachedEntities = try await cacheService.fetchRockets()
+            let cachedEntities = try await rocketStorage.fetchRockets()
             if !cachedEntities.isEmpty {
                 return cachedEntities.map { ResponseModels.RocketModel.Rocket(from: $0) }
             }
             
             let rockets = try await rocketsService.getRockets(RequestModels.Rockets())
-            try await cacheService.saveRockets(rockets)
+            try await rocketStorage.saveRockets(rockets)
             
             return rockets
         }

@@ -27,6 +27,8 @@ public enum AppLocale {
     public enum Service {
         /// Failed to retrieve id token
         public static var failedIDToken: String { AppLocale.tr("Localize", "auth.service.failedIDToken") }
+        /// Failed to log out of account
+        public static var failedSignOut: String { AppLocale.tr("Localize", "auth.service.failedSignOut") }
         /// Firebase
         public static var firebase: String { AppLocale.tr("Localize", "auth.service.firebase") }
         /// GoogleAuth
@@ -47,6 +49,27 @@ public enum AppLocale {
         public static var authenticated: String { AppLocale.tr("Localize", "auth.splash.authenticated") }
         /// Checking session...
         public static var progressText: String { AppLocale.tr("Localize", "auth.splash.progressText") }
+    }
+  }
+
+  public enum Rockets {
+      /// Sign Out
+      public static var signOut: String { AppLocale.tr("Localize", "rockets.signOut") }
+      /// Rockets List
+      public static var title: String { AppLocale.tr("Localize", "rockets.title") }
+    public enum Cell {
+        /// Date: 
+        public static var date: String { AppLocale.tr("Localize", "rockets.cell.date") }
+        ///  ⌀
+        public static var diameter: String { AppLocale.tr("Localize", "rockets.cell.diameter") }
+        ///  HT
+        public static var ht: String { AppLocale.tr("Localize", "rockets.cell.ht") }
+        ///  kg
+        public static var kg: String { AppLocale.tr("Localize", "rockets.cell.kg") }
+        /// Name: 
+        public static var name: String { AppLocale.tr("Localize", "rockets.cell.name") }
+        /// Success: 
+        public static var success: String { AppLocale.tr("Localize", "rockets.cell.success") }
     }
   }
 }

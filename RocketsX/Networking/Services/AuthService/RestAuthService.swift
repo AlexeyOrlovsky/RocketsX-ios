@@ -1,8 +1,8 @@
 //
-//  AuthService.swift
+//  RestAuthService.swift
 //  RocketsX
 //
-//  Created by Алексей Орловский on 21.05.2025.
+//  Created by Алексей Орловский on 25.05.2025.
 //
 
 import Foundation
@@ -15,6 +15,7 @@ private typealias Localization = AppLocale.Auth
 
 protocol AuthServiceProtocol {
     func signInWithGoogle() async throws
+    func signOut() throws
 }
 
 final class AuthService: AuthServiceProtocol {
@@ -48,5 +49,20 @@ final class AuthService: AuthServiceProtocol {
         let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: result.user.accessToken.tokenString)
         _ = try await Auth.auth().signIn(with: credential)
     }
-}
+    
+    func signOut() throws {
+        let firebaseAuth = Auth.auth()
 
+        do {
+            try firebaseAuth.signOut()
+            GIDSignIn.sharedInstance.signOut()
+
+        } catch let signOutError as NSError {
+            throw NSError(
+                domain: Localization.Service.googleAuth,
+                code: Int(signOutError.code),
+                userInfo: [NSLocalizedDescriptionKey: Localization.Service.failedSignOut]
+            )
+        }
+    }
+}

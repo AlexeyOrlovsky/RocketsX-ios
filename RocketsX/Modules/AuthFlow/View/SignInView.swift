@@ -18,6 +18,9 @@ extension Module {
         @StateObject var viewModel: ViewModel
         @EnvironmentObject var navigator: AppFlowNavigator
         
+        // MARK: - Public Properties
+        @State private var isAuthenticated = false
+        
         // MARK: - Body
         var body: some View {
             content()
@@ -35,7 +38,12 @@ private extension ModuleView {
             }
             
             Button(Localization.Signin.googleButtonText) {
-                viewModel.signIn()
+                Task {
+                    let success = await viewModel.signIn()
+                    if success {
+                        navigator.routes = [.root(.rockets)]
+                    }
+                }
             }
             
             if viewModel.state.isLoading {
