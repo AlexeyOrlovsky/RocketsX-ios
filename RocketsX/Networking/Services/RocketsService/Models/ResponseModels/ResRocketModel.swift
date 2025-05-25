@@ -9,7 +9,7 @@ import Foundation
 
 extension ResponseModels {
     struct RocketModel {
-        struct Rocket: Decodable {
+        struct Rocket: Codable {
             let id: String
             let name: String
             let firstFlight: String
@@ -19,11 +19,11 @@ extension ResponseModels {
             let mass: Mass
         }
 
-        struct Dimension: Decodable {
+        struct Dimension: Codable {
             let meters: Double?
         }
 
-        struct Mass: Decodable {
+        struct Mass: Codable {
             let kg: Int
         }
     }
