@@ -11,10 +11,12 @@ import SwiftUI
 struct LaunchesModule {
     typealias ViewModelProtocol = LaunchesViewModelProtocol
     
-    func assemble() -> some View {
-        let repository = Repository()
+    @Inject(\.launchesService) private var launchesService
+    
+    func assemble(rocketId: String) -> some View {
+        let repository = Repository(launchesService: launchesService)
         let useCase = UseCase(repository: repository)
-        let viewModel = ViewModel(useCase: useCase)
+        let viewModel = ViewModel(useCase: useCase, rocketId: rocketId)
         
         return MainView(viewModel: viewModel)
     }
@@ -23,7 +25,12 @@ struct LaunchesModule {
 // MARK: - LaunchesViewModelProtocol
 protocol LaunchesViewModelProtocol: ObservableObject {
     var state: LaunchesModule.ViewState { get set }
+    var launches: [ResponseModels.LaunchesModel.Launch] { get }
+    var isLoading: Bool { get }
+    var errorMessage: String? { get set }
+    var hasLoadedOnce: Bool { get }
     
+    func loadLaunches() async
     func onAppear()
 }
 

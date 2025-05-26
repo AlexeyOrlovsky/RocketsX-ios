@@ -44,6 +44,10 @@ extension Container: @retroactive AutoRegistering {
         self { RestRocketsService(restClient: self.restClient.resolve()) }
     }
     
+    var launchesService: Factory<LaunchesService> {
+        self { RestLaunchesService(restClient: self.restClient.resolve()) }
+    }
+    
     var authService: Factory<AuthService> {
         self { .init() }
     }

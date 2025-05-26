@@ -22,6 +22,7 @@ extension Module {
         
         // MARK: - Properties
         private var cancellable: CancelBag = .init()
+        private var rocketId: String?
         
         // MARK: - Inits
         init(
@@ -143,15 +144,20 @@ extension Controller: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         tableView.estimatedSectionHeaderHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let rocket = viewModel.rocket(at: indexPath.row) else {
+            return
+        }
+        let rocketId = rocket.id
+        print(rocketId)
         
-        let vc = UIHostingController(rootView: LaunchesModule().assemble())
+        let vc = UIHostingController(rootView: LaunchesModule().assemble(rocketId: rocketId))
         navigationController?.pushViewController(vc, animated: true)
     }
 }

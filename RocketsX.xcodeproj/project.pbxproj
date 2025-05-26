@@ -88,6 +88,15 @@
 		D2B67E202DE372140040F795 /* LaunchesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E1F2DE372140040F795 /* LaunchesUseCase.swift */; };
 		D2B67E222DE372220040F795 /* LaunchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E212DE372220040F795 /* LaunchesRepository.swift */; };
 		D2B67E242DE372300040F795 /* LaunchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E232DE372300040F795 /* LaunchesView.swift */; };
+		D2B67E2B2DE3AECB0040F795 /* LaunchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E2A2DE3AECB0040F795 /* LaunchRowView.swift */; };
+		D2B67E302DE3AF610040F795 /* MockLaunchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E2E2DE3AF610040F795 /* MockLaunchesService.swift */; };
+		D2B67E312DE3AF610040F795 /* RestLaunchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E2F2DE3AF610040F795 /* RestLaunchesService.swift */; };
+		D2B67E322DE3AF610040F795 /* LaunchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E2D2DE3AF610040F795 /* LaunchesService.swift */; };
+		D2B67E382DE3B36A0040F795 /* ReqLaunchesQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E372DE3B36A0040F795 /* ReqLaunchesQueryModel.swift */; };
+		D2B67E3A2DE3B3900040F795 /* ResLaunchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E392DE3B3900040F795 /* ResLaunchesModel.swift */; };
+		D2B67E3C2DE3D7780040F795 /* LaunchWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E3B2DE3D7780040F795 /* LaunchWebView.swift */; };
+		D2B67E422DE499320040F795 /* AppAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E3F2DE499320040F795 /* AppAssets.generated.swift */; };
+		D2B67E492DE49C5F0040F795 /* AppAssets+SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E482DE49C5F0040F795 /* AppAssets+SystemImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -177,6 +186,15 @@
 		D2B67E1F2DE372140040F795 /* LaunchesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesUseCase.swift; sourceTree = "<group>"; };
 		D2B67E212DE372220040F795 /* LaunchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesRepository.swift; sourceTree = "<group>"; };
 		D2B67E232DE372300040F795 /* LaunchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesView.swift; sourceTree = "<group>"; };
+		D2B67E2A2DE3AECB0040F795 /* LaunchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRowView.swift; sourceTree = "<group>"; };
+		D2B67E2D2DE3AF610040F795 /* LaunchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesService.swift; sourceTree = "<group>"; };
+		D2B67E2E2DE3AF610040F795 /* MockLaunchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchesService.swift; sourceTree = "<group>"; };
+		D2B67E2F2DE3AF610040F795 /* RestLaunchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestLaunchesService.swift; sourceTree = "<group>"; };
+		D2B67E372DE3B36A0040F795 /* ReqLaunchesQueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqLaunchesQueryModel.swift; sourceTree = "<group>"; };
+		D2B67E392DE3B3900040F795 /* ResLaunchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResLaunchesModel.swift; sourceTree = "<group>"; };
+		D2B67E3B2DE3D7780040F795 /* LaunchWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWebView.swift; sourceTree = "<group>"; };
+		D2B67E3F2DE499320040F795 /* AppAssets.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.generated.swift; sourceTree = "<group>"; };
+		D2B67E482DE49C5F0040F795 /* AppAssets+SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppAssets+SystemImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +366,7 @@
 				D20091832DE1DA4400484665 /* RestClient.swift */,
 				D20091852DE1DA6400484665 /* MockableService.swift */,
 				D20091872DE1DEBD00484665 /* RocketsService */,
+				D2B67E2C2DE3AF0A0040F795 /* LaunchesService */,
 				D2B67E132DE33ED50040F795 /* AuthService */,
 			);
 			path = Services;
@@ -507,6 +526,8 @@
 		D29778192DDFB93800E54CD4 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				D2B67E3F2DE499320040F795 /* AppAssets.generated.swift */,
+				D2B67E482DE49C5F0040F795 /* AppAssets+SystemImage.swift */,
 				D29778182DDFB93800E54CD4 /* AppStrings.generated.swift */,
 			);
 			path = Generated;
@@ -579,8 +600,38 @@
 		D2B67E252DE3723A0040F795 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D2B67E2A2DE3AECB0040F795 /* LaunchRowView.swift */,
+				D2B67E3B2DE3D7780040F795 /* LaunchWebView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D2B67E2C2DE3AF0A0040F795 /* LaunchesService */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67E332DE3B3420040F795 /* RequestModels */,
+				D2B67E362DE3B34B0040F795 /* ResponseModels */,
+				D2B67E2D2DE3AF610040F795 /* LaunchesService.swift */,
+				D2B67E2F2DE3AF610040F795 /* RestLaunchesService.swift */,
+				D2B67E2E2DE3AF610040F795 /* MockLaunchesService.swift */,
+			);
+			path = LaunchesService;
+			sourceTree = "<group>";
+		};
+		D2B67E332DE3B3420040F795 /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67E372DE3B36A0040F795 /* ReqLaunchesQueryModel.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		D2B67E362DE3B34B0040F795 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				D2B67E392DE3B3900040F795 /* ResLaunchesModel.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,6 +776,7 @@
 				D21C06132DDE5E0400E86B8F /* AuthRepository.swift in Sources */,
 				D200916C2DE1DA2200484665 /* UploadRouterProtocol.swift in Sources */,
 				D200916D2DE1DA2200484665 /* Data+Extension.swift in Sources */,
+				D2B67E422DE499320040F795 /* AppAssets.generated.swift in Sources */,
 				D200916E2DE1DA2200484665 /* UserDefaultsStore.swift in Sources */,
 				D200916F2DE1DA2200484665 /* NetworkingAuthenticator.swift in Sources */,
 				D20091702DE1DA2200484665 /* UIDevice+Extension.swift in Sources */,
@@ -749,20 +801,24 @@
 				D20091812DE1DA2200484665 /* DataRequest+Extension.swift in Sources */,
 				D20091342DE06D5200484665 /* RocketsRepository.swift in Sources */,
 				D2B67E0C2DE23E710040F795 /* RocketEntity.swift in Sources */,
+				D2B67E3A2DE3B3900040F795 /* ResLaunchesModel.swift in Sources */,
 				D21C05E42DDE57D200E86B8F /* AppDelegate.swift in Sources */,
 				D200913B2DE0C02B00484665 /* BaseViewController.swift in Sources */,
 				D2B67E102DE23EC70040F795 /* RocketStorage.swift in Sources */,
 				D21C05FA2DDE599B00E86B8F /* AppCoordinatorViewModel.swift in Sources */,
 				D20091472DE0C30F00484665 /* RocketCell.swift in Sources */,
 				D2B67E202DE372140040F795 /* LaunchesUseCase.swift in Sources */,
+				D2B67E3C2DE3D7780040F795 /* LaunchWebView.swift in Sources */,
 				D21C05EF2DDE595100E86B8F /* Container.swift in Sources */,
 				D200914B2DE12B0800484665 /* ViewControllerWrapper.swift in Sources */,
+				D2B67E492DE49C5F0040F795 /* AppAssets+SystemImage.swift in Sources */,
 				D21C05EC2DDE593100E86B8F /* AppCoordinatorModule.swift in Sources */,
 				D2B67DF32DE1E1310040F795 /* RestRocketsService.swift in Sources */,
 				D2B67DF42DE1E1310040F795 /* MockRocketsService.swift in Sources */,
 				D2B67DF52DE1E1310040F795 /* RocketsService.swift in Sources */,
 				D20091862DE1DA6400484665 /* MockableService.swift in Sources */,
 				D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */,
+				D2B67E382DE3B36A0040F795 /* ReqLaunchesQueryModel.swift in Sources */,
 				D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */,
 				D22434272DDD36930098C888 /* RocketsXApp.swift in Sources */,
 				D20091362DE06FA900484665 /* RocketsController.swift in Sources */,
@@ -770,8 +826,12 @@
 				D21C06072DDE5DC700E86B8F /* SplashView.swift in Sources */,
 				D20091842DE1DA4400484665 /* RestClient.swift in Sources */,
 				D20091302DE06D3600484665 /* RocketsViewState.swift in Sources */,
+				D2B67E302DE3AF610040F795 /* MockLaunchesService.swift in Sources */,
+				D2B67E312DE3AF610040F795 /* RestLaunchesService.swift in Sources */,
+				D2B67E322DE3AF610040F795 /* LaunchesService.swift in Sources */,
 				D2B67E222DE372220040F795 /* LaunchesRepository.swift in Sources */,
 				D2B67DFC2DE202E40040F795 /* ResRocketModel.swift in Sources */,
+				D2B67E2B2DE3AECB0040F795 /* LaunchRowView.swift in Sources */,
 				D2B67E1C2DE371FE0040F795 /* LaunchesViewModel.swift in Sources */,
 				D21C060F2DDE5DF500E86B8F /* AuthUseCase.swift in Sources */,
 				D2B67DFA2DE202C90040F795 /* ReqRocketsModel.swift in Sources */,

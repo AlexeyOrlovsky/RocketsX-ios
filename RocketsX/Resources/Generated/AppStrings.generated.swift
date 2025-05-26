@@ -53,8 +53,22 @@ public enum AppLocale {
   }
 
   public enum Launches {
+      /// No launches
+      public static var noLaunches: String { AppLocale.tr("Localize", "launches.noLaunches") }
       /// Launches
       public static var title: String { AppLocale.tr("Localize", "launches.title") }
+    public enum Alert {
+        /// Error
+        public static var error: String { AppLocale.tr("Localize", "launches.alert.error") }
+        /// Ok
+        public static var ok: String { AppLocale.tr("Localize", "launches.alert.ok") }
+    }
+    public enum Row {
+        /// Failure
+        public static var failure: String { AppLocale.tr("Localize", "launches.row.failure") }
+        /// Success
+        public static var success: String { AppLocale.tr("Localize", "launches.row.success") }
+    }
   }
 
   public enum Rockets {

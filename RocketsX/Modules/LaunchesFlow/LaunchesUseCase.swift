@@ -10,6 +10,7 @@ import Foundation
 private typealias Module = LaunchesModule
 
 protocol LaunchesUseCaseProtocol {
+    func fetchLaunches(for rocketId: String, page: Int, limit: Int) async throws -> [ResponseModels.LaunchesModel.Launch]
 }
 
 // MARK: - UseCase
@@ -19,6 +20,10 @@ extension Module {
         
         init(repository: LaunchesRepositoryProtocol) {
             self.repository = repository
+        }
+        
+        func fetchLaunches(for rocketId: String, page: Int, limit: Int) async throws -> [ResponseModels.LaunchesModel.Launch] {
+            try await repository.getLaunches(for: rocketId, page: page, limit: limit)
         }
     }
 }

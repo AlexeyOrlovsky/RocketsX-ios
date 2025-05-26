@@ -24,3 +24,8 @@
 
 // MARK: - Launches
 "launches.title" = "Launches";
+"launches.noLaunches" = "No launches";
+"launches.alert.error" = "Error";
+"launches.alert.ok" = "Ok";
+"launches.row.success" = "Success";
+"launches.row.failure" = "Failure";

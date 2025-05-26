@@ -30,7 +30,7 @@ extension Module {
                 case .rockets:
                     ViewControllerWrapper(controller: rocketsModule.assemble())
                 case .launches:
-                    launchesModule.assemble()
+                    launchesModule.assemble(rocketId: "")
                 }
             }
         }
