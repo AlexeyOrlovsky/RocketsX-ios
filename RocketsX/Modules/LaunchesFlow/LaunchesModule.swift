@@ -12,9 +12,10 @@ struct LaunchesModule {
     typealias ViewModelProtocol = LaunchesViewModelProtocol
     
     @Inject(\.launchesService) private var launchesService
+    @Inject(\.launchStorage) private var launchStorage
     
     func assemble(rocketId: String) -> some View {
-        let repository = Repository(launchesService: launchesService)
+        let repository = Repository(launchesService: launchesService, launchStorage: launchStorage)
         let useCase = UseCase(repository: repository)
         let viewModel = ViewModel(useCase: useCase, rocketId: rocketId)
         

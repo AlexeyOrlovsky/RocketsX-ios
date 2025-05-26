@@ -32,7 +32,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 private extension AppDelegate {
     private func configureSwiftData() {
         do {
-            let schema = Schema([RocketEntity.self])
+            let schema = Schema([RocketEntity.self, LaunchEntity.self])
             let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
             Self.sharedContainer = try ModelContainer(for: schema, configurations: [config])
         } catch {

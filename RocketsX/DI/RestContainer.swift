@@ -56,5 +56,9 @@ extension Container: @retroactive AutoRegistering {
     var rocketStorage: Factory<RocketStorage> {
         self { .init(container: AppDelegate.sharedContainer) }
     }
+    
+    var launchStorage: Factory<LaunchStorage> {
+        self { .init(container: AppDelegate.sharedContainer) }
+    }
 }
 

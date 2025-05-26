@@ -29,3 +29,18 @@ extension ResponseModels {
         }
     }
 }
+
+extension ResponseModels.LaunchesModel.Launch {
+    init(from entity: LaunchEntity) {
+        self.init(
+            name: entity.name,
+            details: entity.details,
+            dateUtc: entity.dateUtc,
+            success: entity.success,
+            links: .init(
+                patch: .init(small: entity.patchSmall),
+                article: entity.article
+            )
+        )
+    }
+}

@@ -97,6 +97,8 @@
 		D2B67E3C2DE3D7780040F795 /* LaunchWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E3B2DE3D7780040F795 /* LaunchWebView.swift */; };
 		D2B67E422DE499320040F795 /* AppAssets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E3F2DE499320040F795 /* AppAssets.generated.swift */; };
 		D2B67E492DE49C5F0040F795 /* AppAssets+SystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E482DE49C5F0040F795 /* AppAssets+SystemImage.swift */; };
+		D2B67E4B2DE4A3130040F795 /* LaunchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E4A2DE4A3130040F795 /* LaunchEntity.swift */; };
+		D2B67E4D2DE4A3410040F795 /* LaunchStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B67E4C2DE4A3410040F795 /* LaunchStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -195,6 +197,8 @@
 		D2B67E3B2DE3D7780040F795 /* LaunchWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWebView.swift; sourceTree = "<group>"; };
 		D2B67E3F2DE499320040F795 /* AppAssets.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssets.generated.swift; sourceTree = "<group>"; };
 		D2B67E482DE49C5F0040F795 /* AppAssets+SystemImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppAssets+SystemImage.swift"; sourceTree = "<group>"; };
+		D2B67E4A2DE4A3130040F795 /* LaunchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchEntity.swift; sourceTree = "<group>"; };
+		D2B67E4C2DE4A3410040F795 /* LaunchStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B67E0F2DE23EC70040F795 /* RocketStorage.swift */,
+				D2B67E4C2DE4A3410040F795 /* LaunchStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -629,6 +634,7 @@
 		D2B67E362DE3B34B0040F795 /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
+				D2B67E4A2DE4A3130040F795 /* LaunchEntity.swift */,
 				D2B67E392DE3B3900040F795 /* ResLaunchesModel.swift */,
 			);
 			path = ResponseModels;
@@ -794,6 +800,7 @@
 				D200917B2DE1DA2200484665 /* NetworkingInterceptor.swift in Sources */,
 				D2B67E1E2DE372090040F795 /* LaunchesViewState.swift in Sources */,
 				D200917C2DE1DA2200484665 /* NetworkingEventMonitor.swift in Sources */,
+				D2B67E4D2DE4A3410040F795 /* LaunchStorage.swift in Sources */,
 				D200917D2DE1DA2200484665 /* Date+Extension.swift in Sources */,
 				D200917E2DE1DA2200484665 /* NetworkingTokenManagerProtocol.swift in Sources */,
 				D200917F2DE1DA2200484665 /* URL+Extension.swift in Sources */,
@@ -820,6 +827,7 @@
 				D297781C2DDFB9F700E54CD4 /* LocalizeKeys.swift in Sources */,
 				D2B67E382DE3B36A0040F795 /* ReqLaunchesQueryModel.swift in Sources */,
 				D21C05E72DDE58C600E86B8F /* AppRoutes.swift in Sources */,
+				D2B67E4B2DE4A3130040F795 /* LaunchEntity.swift in Sources */,
 				D22434272DDD36930098C888 /* RocketsXApp.swift in Sources */,
 				D20091362DE06FA900484665 /* RocketsController.swift in Sources */,
 				D21C05FF2DDE5AD400E86B8F /* CancelBag.swift in Sources */,
