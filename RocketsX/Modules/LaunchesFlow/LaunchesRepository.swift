@@ -25,7 +25,7 @@ extension Module {
             if isFirstPage {
                 let cached = try await launchStorage.fetchLaunches(for: rocketId)
                 if !cached.isEmpty {
-                    print("✅ Показываем кэш (страница 1): \(cached.count)")
+                    print("✅ Show cache (page 1): \(cached.count)")
                     return cached.map { ResponseModels.LaunchesModel.Launch(from: $0) }
                 }
             }
@@ -35,12 +35,12 @@ extension Module {
                 try await launchStorage.saveLaunches(launches, for: rocketId)
                 return launches
             } catch {
-                print("❌ Ошибка загрузки из сети: \(error.localizedDescription)")
+                print("❌ Error loading from network: \(error.localizedDescription)")
 
                 if isFirstPage {
                     let cached = try await launchStorage.fetchLaunches(for: rocketId)
                     if !cached.isEmpty {
-                        print("📦 Используем кэш из-за ошибки сети: \(cached.count)")
+                        print("📦 Using cache due to network error: \(cached.count)")
                         return cached.map { ResponseModels.LaunchesModel.Launch(from: $0) }
                     }
                 }

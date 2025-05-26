@@ -12,7 +12,7 @@ import SwiftData
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     // MARK: - SwiftData
-    static var sharedContainer: ModelContainer! // force unwrap!!!
+    static var sharedContainer: ModelContainer!
     
     // MARK: - UIApplicationDelegate
     func application(
